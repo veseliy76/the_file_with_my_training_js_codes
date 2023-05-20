@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JS codes</title>
+</head>
+
+<body>
+
+    <script>
+
+        //ПРОГРАММА ДЛЯ СЛЕПОЙ ПЕЧАТИ
+
+        // var c = 3;
+        // alert("Добрый день,\n это программа для тренировки навыков 'слепой печати'.");
+        // alert("Поставьте пальцы на A,S,D,F и повторите заданную комбинацию букв.");
+
+        // var letters = [];
+        // for (i = 0; i < c; i++) {
+        //     var random = (Math.random().toFixed(0)); // сделал массив из нолей и единиц.
+        //     letters.push(random);
+        // }
+
+        // var print = [];
+        // while (c > 0) {
+        //     if (letters[c - 1] == 0) {
+        //         print.push("ф");
+        //         c = c - 1;
+        //     } else {
+        //         print.push("а");
+        //         c = c - 1;
+        //     }
+        // }
+
+        // var answer = prompt("Повторите комбинацию букв не смотря на клавиатуру " + print + ".");
+        // var printStr = print.join("");
+        // do {
+
+        //     if (answer == printStr) {
+        //         //if(print==answer.split("")) {  почему не идет эта строка?
+        //         break;
+        //     } else {
+        //         answer = prompt("Не верно, попробуйте еще раз " + print + ".");
+        //     }
+        // } while (answer != printStr);
+        // alert("Красава.");
+
+
+        // ПЕРЕВОДЧИК
+        // var wordsOne = [
+        //     ["green", "зеленый"],
+        //     ["go", "идти"],
+        //     ["do", "делать"],
+        //     ["map", "карта"],
+        //     ["hand", "рука"],
+        // ];
+        // var count = 0;
+        // function translate(words) {
+        //     while (words.length != 0) {
+        //         var c = parseInt(Math.random() * words.length);
+        //         var answer = prompt("Переведите слово " + words[c][0] + ".");
+        //         if (answer == words[c][1]) {
+        //             alert("Красава.");
+        //             count++;
+        //         } else {
+        //             alert("Не правильно.\nПравильный ответ: " + words[c][1] + ".");
+        //         }
+        //         words.splice(c, 1);
+        //     }
+        // }
+        // translate(wordsOne);
+        // alert("Теперь сложнее.\nПока правильных ответов: " + count + ".");
+        // var wordsTwo = [
+        //     ["lag", "нога"],
+        //     ["rose", "роза"],
+        //     ["tv", "тв"],
+        //     ["left", "лево"],
+        //     ["kracken", "Соня"],
+        // ];
+        // translate(wordsTwo);
+        // alert("Всего правильных ответов: " + count + ".");
+
+
+        // ПОВТОРИ ЧИСЛО
+        // function compareAnswers(userAnswer, answer) {
+        //     if (userAnswer == answer) {
+        //         alert("Верно.");
+        //     } else {
+        //         alert("Не верно.");
+        //     }
+        // }
+
+        // function getRandomNumber(max) {
+        //     return parseInt(Math.random() * max);
+        // }
+
+        // function generateRandomNumberArray(length) {
+        //     var arr = [];
+        //     for (var i = 0; i < length; i++) {
+        //         var randomNumber = getRandomNumber(100);
+        //         arr.push(randomNumber);
+        //     }
+        //     return arr;
+        // }
+
+        // var numbers = generateRandomNumberArray(5);
+
+        // alert("Запомните числа их порядок: " + numbers);
+
+        // var userAnswer = +prompt("Каким было первое число?");
+        // compareAnswers(userAnswer, numbers[0]);
+
+        // userAnswer = +prompt("А последнее?");
+        // compareAnswers(userAnswer, numbers[numbers.length - 1]);
+
+        // var n = getRandomNumber(numbers.length - 1);
+        // if (n == 0 || n == numbers.length - 1)
+        //     var n = getRandomNumber(numbers.length - 1);
+        // userAnswer = +prompt("А как насчет числа " + (n + 1) + "?"); //"(n+1)" потому что 'n' может быть нулем, а спрашивать число ноль не комильфо.
+        // compareAnswers(userAnswer, numbers[n]);
+
+
+        // МАТЕМАТИЧ ДЕЙСТВИЯ С ОДНОМЕРНЫМ МАССИВОМ
+        // var c = 20;
+        // var a = 0;
+        // var number = [];
+
+        // for (i = 1; i <= c; i++) {
+        //     var random = parseInt(Math.random() * c);
+        //     number.push(random);
+        // }
+
+        // document.write("Масив из " + "<strong>" + "<em>" + "N" + "</em>" + "</strong>" + " элементов, где n=20. " + "<br>");
+        // document.write("<br>");
+        // document.write("<strong>" + "<em>" + number + "." + "</em>" + "</strong>" + "<br>");
+        // document.write("<br>");
+
+        // var amount = number[0];
+        // function sum() {
+        //     for (var i = 1; i < c; i++) {
+        //         amount = amount + number[i];
+        //     }
+        //     return amount;
+        // }
+
+        // sum();
+
+        // document.write("Сумма чисел массива " + "<strong>" + "<em>" + "N" + "</em>" + "</strong>" + " равна: ");
+        // document.write("<strong>" + amount + "." + "</strong>" + "<br>");
+        // document.write("<br>");
+
+
+
+        // var maxNumber = number[0];
+        // function max(name) {
+        //     if (name <= 1) {     // (c<1), а не (c<0) чтоб стр.40,42,44 не стали отрицательными
+        //         return maxNumber;
+        //     } else {
+        //         if (maxNumber < number[name - 1]) {
+        //             maxNumber = number[name - 1];
+        //             return max(name - 1);
+        //         } else {
+        //             return max(name - 1);
+        //         }
+        //     }
+        // }
+
+        // max(c);
+
+        // document.write("Максимальное число массива " + "<strong>" + "<em>" + "N" + "</em>" + "</strong>");
+        // document.write(" будет число " + "<strong>" + "<em>" + maxNumber + "." + "</em>" + "</strong>" + "<br>");
+        // document.write("<br>");
+
+        // var minNumber = number[0];
+        // function min(name) {
+        //     if (name <= 1) {
+        //         return minNumber;
+        //     } else if (minNumber > number[name - 1]) {
+        //         minNumber = number[name - 1];
+        //         return min(name - 1);
+        //     } else {
+        //         return min(name - 1);
+        //     }
+
+        // }
+        // min(c);
+
+        // document.write("Минимальное число массива " + "<strong>" + "<em>" + "N" + "</em>" + "</strong>");
+        // document.write(" будет число " + "<strong>" + "<em>" + minNumber + "." + "</em>" + "</strong>" + "<br>");
+        // document.write("<br>");
+
+        // var evenNumber = [];
+        // function anEvenNumber() {
+        //     while (c >= 0) {
+        //         if (number[c - 1] == 0)
+        //             c = c - 1;
+        //         var even = number[c - 1] % 2;
+        //         if (even == 0) {
+        //             evenNumber.push(number[c - 1]); // сырое. просто накидал
+        //             c = c - 1;
+        //         } else {
+        //             c = c - 1;
+        //         }
+        //     }
+        // }
+
+        // anEvenNumber();
+        // document.write("Четными числами массива " + "<strong>" + "<em>" + "N" + "</em>" + "</strong>" + " являются числа " + "<strong>" + "<em>" + evenNumber + "." + "</em>" + "</strong>");
+
+
+        // ИГРА "УГАДАЙ ЧИСЛО" ДЛЯ 2-их УЧАСТНИКОВ
+        // var number = parseInt(Math.random() * 100);
+        // alert("Участники должны угадать число, \n в диапазоне от 1 до 100. Если захотите покинуть игру,нажмите 101. ");
+        // do {
+        //     var member1 = prompt("Участник 1, напишите число.");
+        //     if (isNaN(member1) || member1 <= 0 || member1 > 101) {
+        //         member1 = prompt("Числовое значение должно быть положительным, меньше 100.\n Попробуйте снова. При повторном несоблюдении условий-дисквалификация.");
+        //         if (isNaN(member1) || member1 <= 0 || member1 > 101) {
+        //             alert("Дисквалификация. Вы проиграли. Участник2-победитель.");
+        //             break;
+        //         } else if (member1 == 101) {
+        //             alert("Игра окончена по вашему желанию, Участник2-победитель.");
+        //             break;
+        //         } else if (member1 > number) {
+        //             alert("Ваше число больше загаданного.");
+        //         } else if (member1 < number) {
+        //             alert("Ваше число меньше загаданного.");
+        //         } else {
+        //             alert("Поздрaвляю, вы угадали.");
+        //             break;
+        //         }
+        //     } else if (member1 == 101) {
+        //         alert("Игра окончена по вашему желанию, Участник2-победитель.");
+        //         break;
+        //     } else if (member1 > number) {
+        //         alert("Ваше число больше загаданного.");
+        //     } else if (member1 < number) {
+        //         alert("Ваше число меньше загаданного.");
+        //     } else {
+        //         alert("Поздрaвляю, вы угадали.");
+        //         break;
+        //     }
+        //     var member2 = prompt("Участник 2, напишите число.");
+        //     if (isNaN(member2) || member2 <= 0 || member2 > 101) {
+        //         member2 = prompt("Числовое значение должно быть положительным, меньше 100.\n Попробуйте снова. При повторном несоблюдении условий-дисквалификация.");
+        //         if (isNaN(member2) || member2 <= 0 || member2 > 101) {
+        //             alert("Дисквалификация. Вы проиграли. Участник1-победитель.");
+        //             break;
+        //         } else if (member2 == 101) {
+        //             alert("Игра окончена по вашему желанию, Участник1-победитель.");
+        //             break;
+        //         } else if (member2 > number) {
+        //             alert("Ваше число больше загаданного.");
+        //         } else if (member2 < number) {
+        //             alert("Ваше число меньше загаданного.");
+        //         } else {
+        //             alert("Поздрaвляю, вы угадали.");
+        //             break;
+        //         }
+        //     } else if (member2 == 101) {
+        //         alert("Игра окончена по вашему желанию, Участник1-победитель.");
+        //         break;
+        //     } else if (member2 > number) {
+        //         alert("Ваше число больше загаданного.");
+        //     } else if (member2 < number) {
+        //         alert("Ваше число меньше загаданного.");
+        //     } else {
+        //         alert("Поздрaвляю, вы угадали.");
+        //         break;
+        //     }
+        // } while (member1 != number || member2 != number);
+
+
+
+        // Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+        //1. Рассчитать сумму элементов этого массива
+        //2. Найти минимальное число
+        //3. Найти есть ли в этом массиве число 3
+        // const arr = [];
+        // let arrayLengh = 5;
+        // let sum = 0;
+        // let count = 0;
+        // for (let i = 0; i < arrayLengh; i++) {
+        //     arr[i] = (Math.floor(Math.random() * 10));
+        //     sum += Number(arr[i]);
+        //     if (arr[i] == 3) {
+        //         count++;
+        //     }
+        // }
+        // let minNum = arr[0];
+        // for (let i = 1; i < arr.length; i++) {
+        //     if (arr[i] < minNum) {
+        //         minNum = arr[i];
+        //     }
+        // }
+
+        // let num3Count = 0;
+        // for (let i = 1; i < arr.length; i++) {
+        //     if (arr[i] == 3) {
+        //         alert("В массиве присутствует цифра '3'.");
+        //         num3Count = 1;
+        //         break;
+        //     }
+        // }
+        // if (num3Count == 0) {
+        //     alert("В массиве нет цифры '3'.");
+        // }* /
+
+        // alert(`В рандомном массиве [${arr}] сумма эл-тов=${sum}, цифра '3' встречается ${count} раз(а), минимальный элемент=${minNum}.`);
+
+
+        // Пусть у нас дан массив состоящий из 10 элементов с произвольными числами. Давайте переберем его циклом и числа, которые делятся на 2, возведем в квадрат и выведем в консоль, а числа, которые делятся на 3, возведем в куб и выведем в консоль.
+        // const arr = [];
+        // let arrayLengh = 10;
+        // for (let i = 0; i < arrayLengh; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100);
+        //     console.log(`эл-т массива ${arr[i]}:`);
+        //     if (arr[i] == 0) {
+        //         continue;
+        //     } else if (arr[i] % 2 == 0) {
+        //         console.log(`делится на два, квадрат числа элемента=${arr[i] ** 2}.`);
+        //     } else if (arr[i] % 3 == 0) {
+        //         console.log(`делится на три, куб числа элемента=${arr[i] ** 3}.`);
+        //     }
+        // };
+
+
+        //Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
+        // const post = {
+        //     author: "John",   //вывести этот текст
+        //     postId: 23,
+        //     comments: [
+        //         {
+        //             userId: 10,
+        //             userName: "Alex",
+        //             text: "lorem ipsum",
+        //             rating: {
+        //                 likes: 10,
+        //                 dislikes: 2, //вывести это число
+        //             },
+        //         },
+        //         {
+        //             userId: 5,  //вывести это число
+        //             userName: "Jane",
+        //             text: "lorem ipsum 2",  //вывести этот текст
+        //             rating: {
+        //                 likes: 3,
+        //                 dislikes: 1,
+        //             },
+        //         },
+        //     ],
+        // };
+        // console.log(post.author);
+
+        // let { comments } = post;
+        // const commentsFirstElem = comments[0];
+        // for (const key in commentsFirstElem) {
+        //     for (const keyIn in commentsFirstElem[key])
+        //         if (keyIn === "dislikes") {
+        //             console.log(commentsFirstElem[key][keyIn]);
+        //         }
+        // };
+
+        // const commentsSecondElem = comments[1];
+        // console.log(commentsSecondElem.userId);
+        // console.log(commentsSecondElem.text);
+
+
+        // Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter.Исходные данные - массив products.
+        // Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+        // const products = [
+        //     {
+        //         id: 3,
+        //         price: 127,
+        //         photos: [
+        //             "1.jpg",
+        //             "2.jpg",
+        //         ],
+        //     },
+        //     {
+        //         id: 5,
+        //         price: 499,
+        //         photos: [],
+        //     },
+        //     {
+        //         id: 10,
+        //         price: 26,
+        //         photos: [
+        //             "3.jpg",
+        //         ],
+        //     },
+        //     {
+        //         id: 8,
+        //         price: 78,
+        //     },
+        // ];
+        // const productPhoto = products.filter((elem) => {
+        //     if (elem.photos) {
+        //         if (elem.photos.length !== 0) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     } else {
+        //         return false;
+        //     }
+        // });
+        // console.log(productPhoto);
+
+        // const productMinPrice = products.sort(function (a, b) {
+        //     return a.price - b.price;
+        // });
+        // console.log(productMinPrice);
+
+
+        // При клике на какой-либо тег на странице в консоль должно выводиться
+        // сообщение наподобие:
+        // Класс "super_element" присутствует в элементе "div".
+        // сообщение должно определять присутствует или отсутствует класс "super_element"
+        // у элемента, а также выводить в нижнем регистре верный тег в данной строке, по
+        // которому был совершен клик.
+        // Необходимо использовать делегирование.
+        // <p class="super_element">Привет</p>
+
+        // <img src="https://placeimg.com/50/50/animals" alt="">
+        // <img src="https://placeimg.com/50/50/arch" alt="">
+        // <img src="https://placeimg.com/50/50/nature" alt="">
+        // <img src="https://placeimg.com/50/50/people" alt="">
+        // <img src="https://placeimg.com/50/50/tech" alt="">
+        // <img src="https://placeimg.com/50/50/tech/grayscale" alt="">
+        // <img src="https://placeimg.com/50/50/tech/sepia" alt="">
+
+        // <br>
+
+        // <button>Кнопка</button>
+        // <button class="super_element">Кнопка с классом btn</button>
+        // <button>Кнопка</button>
+
+        // <br>
+
+        // <textarea></textarea>
+
+        // <br>
+
+        // <ul>
+        //     <li>
+        //         <button>Кнопка 1</button>
+        //     </li>
+        //     <li>
+        //         <button>Кнопка 2</button>
+        //     </li>
+        //     <li>
+        //         <button>Кнопка 3</button>
+        //     </li>
+        //     <li>
+        //         <button>Кнопка 4</button>
+        //     </li>
+        // </ul>
+        // document.body.addEventListener("click", action);
+        // function action(e) {
+        //     let targetClick = e.target;
+        //     if (targetClick.classList.contains("super_element")) {
+        //         console.log(`элемент "${targetClick.tagName.toLowerCase()}" содержит класс "super_element".`);
+        //     } else {
+        //         console.log(`элемент "${targetClick.tagName.toLowerCase()}" НЕ содержит класс "super_element".`);
+        //     }
+        // };
+
+        //С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+        // let liEl = document.querySelectorAll('li');
+        // for (let i = 1; i < liEl.length; i += 2) {
+        //     liEl[i].style.backgroundColor = "gold";
+        //     let liElChild = liEl[i];
+        //     liElChild.firstElementChild.style.backgroundColor = "gold";
+        // }
+
+
+
+
+        // <input id="from" type="text">
+        // В инпуте написано: <span></span>
+        // <br>
+
+        // <button class="messageBtn">Показать блок</button>
+        // <div class="message">Привет :)</div>
+        // <br>
+
+        // <form>
+        //     <label>
+        //         Первый инпут:
+        //         <input class="form-control" type="text">
+        //     </label>
+        //     <br>
+        //     <br>
+        //     <label>
+        //         Второй инпут:
+        //         <select class="form-control">
+        //             <option value=""></option>
+        //             <option value="1">Один</option>
+        //             <option value="2">Два</option>
+        //         </select>
+        //     </label>
+        //     <br>
+        //     <br>
+        //     <button>Отправить</button>
+        // </form>
+        // При изменении значения в input с id="from", значение содержащееся в нем
+        // должно моментально отображаться в span. То есть при печати в input'е тег span
+        // также должен меняться.
+        // let inputEl = document.querySelector('#from');
+        // let spanEl = document.querySelector('span');
+        // inputEl.addEventListener("input", (e) => {
+        //     spanEl.textContent = e.target.value
+        // });
+
+        // Необходимо при отправке формы проверить, заполнены ли все поля в этой
+        // форме. Если какое-либо поле не заполнено, форма не должна отправляться, также
+        // должны быть подсвечены незаполненные поля (необходимо поставить класс error
+        // незаполненным полям).
+        // Как только пользователь начинает заполнять какое-либо поле, необходимо,
+        // при вводе в данное поле, произвести проверку:
+        // Если поле пустое, необходимо данное поле подсветить (поставить класс error
+        // данному полю).
+        // Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать.
+        let inputFields = document.querySelectorAll('.form-control');
+        let formEl = document.querySelector('form');
+        let btnEl = formEl.lastChild.previousSibling;
+        formEl.addEventListener('submit', (e) => {
+            inputFields.forEach(checkInput => {
+                if (checkInput.value === '' || checkInput.value === ' ') {
+                    e.preventDefault();
+                    checkInput.classList.add('error');
+                    checkInput.style.border = '1px solid red';
+                } else {
+                    checkInput.style.border = '1px solid green';
+                };
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
